@@ -6,43 +6,43 @@ import streamlit as st
 preguntas = [
    {
         "texto": "¿Cuál es el lugar más frío de la tierra?",
-        "opciones": ["Polo Norte", "Antártida", "Rusia", "Islandia", "Mi casa"],
+        "opciones": ["Polo Norte", "Antártida", "Rusia", "Islandia", "Mi casa",],
         "correcta": "Antártida"
     },
     {
         "texto": "¿Quién escribió 'Don Quijote de la Mancha'?",
-        "opciones": ["Federico García Lorca", "Miguel de Cervantes", "Gabriel García Márquez", "Pablo Picasso"],
+        "opciones": ["Federico García Lorca", "Miguel de Cervantes", "Gabriel García Márquez", "Pablo Picasso",],
         "correcta": "Miguel de Cervantes"
     },
     {
         "texto": "¿Cuál es el río más largo del mundo?",
-        "opciones": ["Nilo", "Misisipi", "Amazonas", "Tajo"],
-        "correcta": "Amazonas"
+        "opciones": ["Misisipi", "Amazonas", "Nilo", "Tajo"],
+        "correcta": "Nilo"
     },
     {
         "texto": "¿Qué elemento de la tabla periódica tiene el símbolo 'Og'?",
-        "opciones": ["Oro", "Oganeson", "Oxígeno"],
+        "opciones": ["Oro", "Oganeson", "Oxígeno",],
         "correcta": "Oganeson"
     },
     {
         "texto": "¿En qué continente se encuentra el Monte Everest?",
-        "opciones": ["Asia", "África", "América", "América del Sur"],
+        "opciones": ["Asia", "África", "América", "América del Sur",],
         "correcta": "Asia"
     },
     {
         "texto": "¿Qué planeta es el Planeta Rojo?",
-        "opciones": ["Júpiter", "Venus", "Marte", "Saturno"],
+        "opciones": ["Júpiter", "Venus", "Marte", "Saturno",],
         "correcta": "Marte"
     },
     {
         "texto": "¿Componente principal que procesa los datos en un ordenador?",
-        "opciones": ["RAM", "Disco Duro", "CPU (Procesador)"],
+        "opciones": ["RAM", "Disco Duro", "CPU (Procesador)",],
         "correcta": "CPU (Procesador)"
     },
     {
         "texto": "¿Cual es la marca mas vendida de zapartillas?",
-        "opciones": ["Nike", "Adidas", "Reebok", "Puma"],
-        "correcta": "1969"
+        "opciones": ["Adidas", "Nike", "Reebok", "Puma"],
+        "correcta": "Nike"
     },
     {
         "texto": "¿Cuál es el país con más habitantes del mundo actualmente?",
@@ -88,6 +88,10 @@ if boton_enviar:
     for i in range(total):
         if respuestas_usuario[i] == preguntas[i]["correcta"]:
             aciertos = aciertos + 1
+        else:
+            aciertos = aciertos -0.25
+    if aciertos < 0:
+        aciertos = 0
 
     # Calculamos la nota sobre 10
     nota = (aciertos / total) * 10
