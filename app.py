@@ -106,11 +106,16 @@ if boton_enviar:
        st.warning("Insuficiente pero cerca")
     elif 5 <= nota_redonda < 6:
        st.warning("Ok aprobado tio")
+       st.balloons() # ¡Efecto de globos!
     elif 6 <= nota_redonda < 7:
        st.warning("Buen trabajo sigue asi")
+       st.balloons() # ¡Efecto de globos!
     elif 7 <= nota_redonda < 9:
        st.warning("Notable! que bien")
+       st.balloons() # ¡Efecto de globos!
     elif 9 <= nota_redonda < 10:
        st.warning("Sobresaliente siii")
+       st.balloons() # ¡Efecto de globos!
     elif nota_redonda == 10:
        st.warning("Nota perfecta, Excelente")
+       st.balloons() # ¡Efecto de globos!
